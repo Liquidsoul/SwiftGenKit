@@ -20,6 +20,9 @@
   "dependencies": {
     "PathKit": [
       "~> 0.8.0"
+    ],
+    "SWXMLHash": [
+
     ]
   },
   "frameworks": "Foundation"

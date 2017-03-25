@@ -2,6 +2,8 @@ PODS:
   - PathKit (0.8.0)
   - SwiftGenKit (1.0.1):
     - PathKit (~> 0.8.0)
+    - SWXMLHash
+  - SWXMLHash (3.0.4)
 
 DEPENDENCIES:
   - SwiftGenKit (from `.`)
@@ -12,7 +14,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   PathKit: dcab05d701474011aae0e40cf892298a831f63d6
-  SwiftGenKit: 9b6f20360c33216663514b720016fa2d57cea478
+  SwiftGenKit: 7c7db79831480be8be9fe8eeb2b818f59f90382d
+  SWXMLHash: 29d20b84692fc319ea8ed933058fe7d8d005139b
 
 PODFILE CHECKSUM: c30ec8de82eda04587ffe005a6ce7372509b1340
 
