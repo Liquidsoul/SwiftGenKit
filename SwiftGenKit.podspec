@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 
   s.source_files = "Sources/**/*.swift"
 
+  s.dependency 'Fuzi'
   s.dependency 'PathKit', '~> 0.8.0'
-  s.dependency 'SWXMLHash'
   s.framework  = "Foundation"
 end

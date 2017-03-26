@@ -18,11 +18,11 @@
   },
   "source_files": "Sources/**/*.swift",
   "dependencies": {
+    "Fuzi": [
+
+    ],
     "PathKit": [
       "~> 0.8.0"
-    ],
-    "SWXMLHash": [
-
     ]
   },
   "frameworks": "Foundation"

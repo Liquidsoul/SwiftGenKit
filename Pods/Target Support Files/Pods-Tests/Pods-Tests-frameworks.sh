@@ -89,13 +89,13 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/Fuzi/Fuzi.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PathKit/PathKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SWXMLHash/SWXMLHash.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftGenKit/SwiftGenKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/Fuzi/Fuzi.framework"
   install_framework "$BUILT_PRODUCTS_DIR/PathKit/PathKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SWXMLHash/SWXMLHash.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftGenKit/SwiftGenKit.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
