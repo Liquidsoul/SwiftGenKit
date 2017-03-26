@@ -6,8 +6,8 @@
 
 import AppKit.NSColor
 import Foundation
+import Fuzi
 import PathKit
-import SWXMLHash
 
 public protocol ColorsFileParser {
   var colors: [String: UInt32] { get }
@@ -169,8 +169,7 @@ extension NSColor {
 
 public final class ColorsXMLFileParser: ColorsFileParser {
   private enum XML {
-    static let resourcesTag = "resources"
-    static let colorTag = "color"
+    static let colorPath = "/resources/color"
     static let nameAttribute = "name"
   }
 
@@ -179,11 +178,11 @@ public final class ColorsXMLFileParser: ColorsFileParser {
   public init() {}
 
   public func parseFile(at path: Path) throws {
-    let xml = SWXMLHash.parse(try path.read())
+    let document = try Fuzi.XMLDocument(string: try path.read())
 
-    for color in xml[XML.resourcesTag][XML.colorTag] {
-      guard let name = try color.element?.attribute(by: XML.nameAttribute)?.text,
-        let value = color.element?.text else { continue }
+    for color in document.xpath(XML.colorPath) {
+      let value = color.stringValue
+      guard let name = color["name"], !name.isEmpty else { continue }
 
       colors[name] = try parse(hex: value, key: name)
     }
