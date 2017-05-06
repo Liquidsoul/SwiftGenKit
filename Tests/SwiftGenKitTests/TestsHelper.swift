@@ -82,6 +82,7 @@ class Fixtures {
     case colors = "Colors"
     case fonts = "Fonts"
     case images = "Images"
+    case models = "JSONModel"
     case storyboardsiOS = "Storyboards-iOS"
     case storyboardsMacOS = "Storyboards-macOS"
     case strings = "Strings"
